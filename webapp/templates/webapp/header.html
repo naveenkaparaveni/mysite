@@ -1,0 +1,99 @@
+<html lang="en">
+
+<head>
+	<title>Obi</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+	<link rel='stylesheet' href="{% static 'webapp/css/bootstrap.min.css'%}" type = 'text/css'/>
+	<meta name="viewport" content = "width=device-width,
+	initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<style type="text/css">
+		html,
+		body {
+			height:100%
+			}
+	</style>
+</head>
+<body class="body" style="background-color:#f6f6f6">
+
+	<nav class="navbar navbar-inverse">
+	<div class="conatainer-fluid" style="min-height:20%; ">
+		<div class="navbar-header">
+			<div class="col-sm-2">
+				<br>
+				<center>
+					<img src="{% static 'webapp/image/profile.jpg' %}" class="img-responsive" style='max-height:100px' alt="face">
+				</center>
+			</div>
+			<div class="col-sm-5" style="background-color:#f6f6f6">
+				<br>
+				<center>
+				<h3>Programming, Teaching, Entrepreneurship</h3>
+				</center>
+			</div>
+			<div class="col-sm-5">
+				<br>
+				<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form>
+				<ul class="nav nav-pills nav-stacked">
+						
+							<li><a href='/'>Home</a></li>
+							<li><a href='/blog/'>Blog</a></li>
+							<li><a href='/Videos/'>Videos</a></li>
+							<li><a href='/Contact/'>Contact</a></li>
+							
+						</ul>
+				
+				
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href='/Login/'>Login</a></li>
+				    <li><a href='/Signin/'>Sign up</a></li>
+				</ul>
+				
+			</div>
+		</div>
+		</div>
+		</nav>
+		
+		<div class="row">
+		
+			<div class="col-sm-2">
+			
+			
+			<br>
+			
+			<br>
+				<!--Great till you resize.-->
+					<!--<div class="well bs-sidebar affix" id="sidebar" style="background-color:#fff">-->
+					
+					<div class="well bs-sidebar affix" id="sidebar" style="background-color:#fff" span class="border border-danger">
+					
+						
+					</div><!--well bs-sidebar affix-->
+				</div><!--col-sm-2-->
+				<div class="col-sm-10">
+					<div class='container-fluid' style="min-height:70%;">
+					<br>
+					<br>
+						{% block content %}
+						{% endblock %}
+					</div>
+				</div>
+			</div>
+		</div>
+		</body>
+		
+<footer>
+	<div class="container-fluid" style='margin-right:15px'>
+		<p><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a>
+		| <a href="#" target="blank">Google+</a></p>
+	</div>
+</footer>
+
+
+
+
+</html>

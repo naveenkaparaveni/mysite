@@ -1,0 +1,28 @@
+{% extends "webapp/header.html" %}
+
+
+
+{% block content %}
+	
+	
+		<h3>{{post.title}}</h3>
+		<h6>on {{post.date}}</h6>
+		<hr>
+		{{post.body|safe|linebreaks}}
+		<hr>
+		
+		<a href="{% url 'blog:add_comment' pk=post.pk%}">Leave a comment</a>
+		<h1>Comments</h1>
+		{% csrf_token %}
+		{% for comment in post.comments.all %}
+		<div class="panel panel-default">
+			<p> Comment: {{ comment.comment }}</p>
+			<p>User: {{ comment.user }}</p>
+		</div>
+		{% empty %}
+			<p>There are no comments</p>
+		{% endfor %}
+		<a class="btn btn-primary" data-toggle="collapse" href="/blog/" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Back</a>
+		
+{% endblock %}

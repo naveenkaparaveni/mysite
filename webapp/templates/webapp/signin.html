@@ -1,0 +1,75 @@
+
+<html>
+	<head>
+		
+		<!-- 
+		palette:
+		dark blue: #003F72
+		yellow: #FFD166
+		salmon: #EF476F
+		offwhite: #e7d7d7
+		Light Blue: #118AB2
+		Light green: #7DDF64
+		-->
+		{% load staticfiles %}
+		<link rel='stylesheet' href="{% static 'webapp/css/bootstrap.min.css'%}" type = 'text/css'/>
+		<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+		<title>Python Programming Tutorials</title>
+
+		<meta name="description" content="Python Programming tutorials from beginner to advanced on a massive variety of topics. All video and text tutorials are free.">
+	</head>
+
+
+	 <body>
+	  
+		<div class="container">
+		  <h4>Register</h4>
+		  <br>
+
+		  
+		  
+			<form method=post action="/register/">
+			  <dl>
+				
+  <dt><label for="username">Username</label>
+  <dd><input class="form-control" id="username" name="username" type="text" value="">
+  
+  </dd>
+
+				
+  <dt><label for="email">Email Address</label>
+  <dd><input class="form-control" id="email" name="email" type="text" value="">
+  
+  </dd>
+
+				
+  <dt><label for="password">Password</label>
+  <dd><input class="form-control" id="password" name="password" type="password" value="">
+  
+  </dd>
+
+				
+  <dt><label for="confirm">Repeat Password</label>
+  <dd><input class="form-control" id="confirm" name="confirm" type="password" value="">
+  
+  </dd>
+
+				
+				<p>By registering, you accept the <a href="/about/tos" target="blank">Terms of Service</a> and <a href="/about/privacy-policy" target="blank">Privacy Notice</a></p>
+
+
+			  </dl>
+			  <p><input class="btn btn-primary" type=submit value=Register>
+			  <a class="btn btn-primary" data-toggle="collapse" href="/" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Back
+  </a>
+			</form>
+		<div class="container">
+		   <br>
+			
+		  </div>
+		</div>
+
+	 </body>
+	
+</html>
